@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+ @font-face {
+  font-family: "Arial MT Bold";
+  font-weight: 700;
+  src: url("/src/assets/ARIALBOLDMT.otf") format("opentype") ;
+  }
+
+  @font-face {
+    font-family: 'Arial MT';
+    font-weight: normal;
+    font-style:normal;
+    src: url("/src/assets/ARIALMTLIGHT.woff") format("woff");
+    }
+
+ h1{
+  margin:0;
+  font-family: "Arial MT Bold";
+  font-size:14px;
+  color: #FFFFFF;
+}  
+
+span {
+  font-family: "Arial MT";
+  color: #FFFFFF;
+  font-size:14px;
+  opacity: 0.5
+}  
+
+input[type=number]{
+  @apply w-[59px] 
+}
+
+
+.number-wrapper {
+  position: relative;
+}
+.number-wrapper input[type="number"] {  
+padding-block: 2px;
+padding-left:7px;
+width:59px;
+background: #47484E;
+border-radius: 6px;
+border:none;
+}
+.number-wrapper:after,
+.number-wrapper:before {
+width: 1.4rem;  
+font-size: 8px;
+position: absolute;
+top: 0;
+right: 0;
+bottom:0;
+margin: auto;
+background: #808289;
+pointer-events: none;
+}
+.number-wrapper:after {
+  border-top-right-radius: 6px;
+  padding-top: 2px;
+  content: "\25B2";
+  text-align:center; 
+  color: #ffffff; 
+  bottom: auto;
+}
+.number-wrapper:before {
+  border-bottom-right-radius: 6px;
+  content: "\25BC"; 
+  text-align:center;
+  color: #ffffff; 
+  top: auto;
+}
