@@ -3,19 +3,21 @@ import { FaCheck } from 'react-icons/fa6'
 
 
 interface Props {
-    label?: string;
+    // label?: string;
     id: string;
+    className?: string;
     checked:boolean;
-    onChange: () => void
+    onChange: () => void;
+
 
 }
 
-const Checkbox = ({ label, id, checked, onChange }: Props) => {
+const Checkbox = ({ id, checked, onChange, className }: Props) => {
 
     return (
-        <div className='flex justify-center gap-3 items-center'>
-            <span>{label != null ? label.concat(':') : ""}</span>
-            <div className="inline-flex items-center">
+        // <div className='flex justify-center gap-3 items-center'>
+        //     <span>{label != null ? label.concat(':') : ""}</span>
+            <div className={`inline-flex items-center ${className}`}>
                 <label
                     className="relative flex items-center  rounded-full cursor-pointer"
                     htmlFor={id}
@@ -35,7 +37,7 @@ const Checkbox = ({ label, id, checked, onChange }: Props) => {
                     </span>
                 </label>
             </div>
-        </div>
+        // </div>
     )
 }
 
